@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScript Variables</h1>
 
-<p>Create a variable, assign a value to it, and display it:</p>
-
-    <object>
-        <embed id="swf" width="550" height="400" />
-    </object>
-
+<div class="main">
+        <embed id="my_url" width="900" height="1300" frameborder="0" allowfullscreen>
+</div>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 <script>
 var url_string = window.location.href
@@ -16,7 +12,10 @@ var url = new URL(url_string);
 var swf = url.searchParams.get("swf");
 console.log(swf);
 
-document.getElementById("swf").innerHTML = swf;
+        function myFunction() {
+            document.getElementById("my_url").src = swf;
+        }
+        myFunction();
 </script>
 
 </body>
